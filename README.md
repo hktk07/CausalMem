@@ -29,5 +29,21 @@ pip install transformers==4.45.1 decord einops accelerate==0.26.0 numpy==1.26.1
 pip install ninja packaging
 pip install flash-attn==2.5.8 --no-build-isolation
 ```
+### Datasets and Models
+**Offline video datasets:**
 
+LongVideoBench [Download](https://huggingface.co/datasets/longvideobench/LongVideoBench);
+Video-MME [Download](https://huggingface.co/datasets/lmms-lab/Video-MME);
+MLVU [Download](https://huggingface.co/datasets/MLVU/MVLU);
+LVBench [Download](https://huggingface.co/datasets/lmms-lab/LVBench/tree/main)
+
+**Streaming video datasets:**
+
+Streamingbench [Download](https://huggingface.co/datasets/mjuicem/StreamingBench);
+OVOBench [Download](https://huggingface.co/datasets/JoeLeelyf/OVO-Bench)
+
+**Models**
+
+LLaVA-onevision-qwen2-7b-ov [Download](https://huggingface.co/lmms-lab/llava-onevision-qwen2-7b-ov);
+Qwen2.5-VL [Download](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)
 
