@@ -41,7 +41,7 @@ for IDX in "${!GPULIST[@]}"; do
     TAU_SPATIAL=$TAU_SPATIAL \
     GPRUNE_RATIO=$GPRUNE_RATIO \
     CUDA_VISIBLE_DEVICES=$GPU_ID \
-    python3 -W ignore ./eval/modeling_$TASK.py \
+    python3 -W ignore /eval/modeling_$TASK.py \
         --model-path "$CKPT" \
         --video_dir ./MLVU/video \
         --gt-file ./MLVU/annotations/multiple_choice.json \
