@@ -41,7 +41,7 @@ for IDX in "${!GPULIST[@]}"; do
     TRANSFORMERS_OFFLINE=1 \
     METHOD=$METHOD \
     CUDA_VISIBLE_DEVICES=$GPU_ID \
-    python3 -W ignore ./eval/modeling_$TASK.py \
+    python3 -W ignore /eval/modeling_$TASK.py \
         --model-path "$CKPT" \
         --video-dir ./streamingbench/realtime_video \
         --gt-file ./streamingbench/StreamingBench/Real_Time_Visual_Understanding.csv \
