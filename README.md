@@ -8,7 +8,7 @@ CausalMem is a **training-free dynamic visual memory framework** designed for ef
   </a>
 </p>
 
-### Highlights
+## Highlights
 * 🚀 **Training-Free**: No additional model training or fine-tuning required.
 * 🧠 **Dynamic Memory Bank**: Continuously updates a fixed-budget visual memory for streaming video understanding.
 * 🎯 **Semantic Preservation**: Estimates token redundancy via an online semantic basis to retain informative visual tokens.
@@ -16,7 +16,7 @@ CausalMem is a **training-free dynamic visual memory framework** designed for ef
 * 📈 **Effective**: Achieves consistent gains on both streaming and offline video benchmarks, with **+3.2%** and **+3.0%** average accuracy improvements.
 * 🔧 **Plug-and-Play**: Easily applicable to representative MLLMs such as **LLaVA-OneVision** and **Qwen2.5-VL**.
 
-### conda environment set up
+## conda environment set up
 ```
 conda create -n causalmem python==3.10.0
 conda activate causalmem
@@ -29,21 +29,51 @@ pip install transformers==4.45.1 decord einops accelerate==0.26.0 numpy==1.26.1
 pip install ninja packaging
 pip install flash-attn==2.5.8 --no-build-isolation
 ```
-### Datasets and Models
-**Offline video datasets:**
+## 📊 Datasets and Models
 
-LongVideoBench [Download](https://huggingface.co/datasets/longvideobench/LongVideoBench);
-Video-MME [Download](https://huggingface.co/datasets/lmms-lab/Video-MME);
-MLVU [Download](https://huggingface.co/datasets/MLVU/MVLU);
-LVBench [Download](https://huggingface.co/datasets/lmms-lab/LVBench/tree/main)
+### 🗂️ Offline Video Datasets
 
-**Streaming video datasets:**
+| Dataset | Download Link |
+|----------|--------------|
+| LongVideoBench | https://huggingface.co/datasets/longvideobench/LongVideoBench |
+| Video-MME | https://huggingface.co/datasets/lmms-lab/Video-MME |
+| MLVU | https://huggingface.co/datasets/MLVU/MVLU |
+| LVBench | https://huggingface.co/datasets/lmms-lab/LVBench/tree/main |
 
-Streamingbench [Download](https://huggingface.co/datasets/mjuicem/StreamingBench);
-OVOBench [Download](https://huggingface.co/datasets/JoeLeelyf/OVO-Bench)
+---
 
-**Models**
+### 🌊 Streaming Video Datasets
 
-LLaVA-onevision-qwen2-7b-ov [Download](https://huggingface.co/lmms-lab/llava-onevision-qwen2-7b-ov);
-Qwen2.5-VL [Download](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)
+| Dataset | Download Link |
+|----------|--------------|
+| StreamingBench | https://huggingface.co/datasets/mjuicem/StreamingBench |
+| OVOBench | https://huggingface.co/datasets/JoeLeelyf/OVO-Bench |
 
+---
+
+### 🤖 Models
+
+| Model | Download Link |
+|--------|--------------|
+| LLaVA-OneVision-Qwen2-7B-OV | https://huggingface.co/lmms-lab/llava-onevision-qwen2-7b-ov |
+| Qwen2.5-VL-7B-Instruct | https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct |
+
+## Running Evaluation
+```
+cd llava
+bash scripts/eval_{dataset}.sh ## note that the dataset, model path, output_path... should change to your real path
+python eval/eval_{dataset}.py --output_dir /path/to/your/output
+```
+## Citation
+
+```
+@misc{song2026dynamicfixedbudgetmemorybank,
+      title={Towards a Dynamic and Fixed-budget Memory Bank for Efficient Streaming Video Understanding}, 
+      author={Baiyang Song and Yuli Lin and Qiong Wu and Tao Chen and Jun Peng and Xiao Chen and Yiyi Zhou and Rongrong Ji},
+      year={2026},
+      eprint={2606.25658},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.25658}, 
+}
+```
