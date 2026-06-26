@@ -1,7 +1,7 @@
 # Code of CausalMem
 <p align="center">
-  <a href="imgs/overview.png">
-    <img src="imgs/overview_v4.png" alt="AdaQ Overview" width="95%"/>
+  <a href="img/overall.png">
+    <img src="img/overall.png" alt="CausalMem Overview" width="95%"/>
   </a>
 </p>
 ## conda environment set up
